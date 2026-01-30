@@ -1,0 +1,1 @@
+how to link GitHub to Rstudio
