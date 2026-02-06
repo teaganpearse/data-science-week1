@@ -28,15 +28,74 @@ mosquito_egg_raw |>
   group_by(site, treatment) |> 
   summarise(n = n())
 
-# Observations ====
-# Your observations (add as comments below):
-# - What biological system is this?
-#   Female mosquito fecundity - how age, body mass and treatment influence success of egg laying and hatching
-# - What's being measured?
-#   Egg laying and hatching success
-# - How many observations?
-#   205 rows, 9 variables
-# - Anything surprising?
-#   large difference in body masses
-# - Any obvious problems?
-# Inconsistency with capitalisation and spaces/dashes, a few negative values for body mass, a number of NA values in a few columns
+
+# W E E K   2  - fixes
+# FIX 1: [capitalisation inconsistencies and typos in treatment and site variables] ====
+
+# Show the problem:
+mosquito_egg_data|>  
+  distinct(treatment)
+
+mosquito_egg_data|>  
+  distinct(site)
+
+# Fix it:
+mosquito_egg_data_step1 <- mosquito_egg_data |> 
+  mutate(treatment = case_when(
+    treatment == "Medium_dose" ~ "medium_dose",
+    treatment == "High_dose" ~ "high_dose",
+    treatment == "Low_dose" ~ "low_dose",
+    treatment == "Control" ~ "control",
+    treatment == "MEDIUM_DOSE" ~ "medium_dose",
+    treatment == "HIGH_DOSE" ~ "high_dose",
+    treatment == "LOW_DOSE" ~ "low_dose",
+    treatment == "CONTROL" ~ "control",
+    .default = as.character(treatment)
+  )
+  )
+  
+mosquito_egg_data_step2 <- mosquito_egg_data_step1 |> 
+  mutate(site = case_when(
+    site == "Site_A" ~ "site_a",
+    site == "Site-A" ~ "site_a",
+    site == "Site A" ~ "site_a",
+    site == "Site B" ~ "site_b",
+    site == "Site_B" ~ "site_b",
+    site == "Site-B" ~ "site_b",
+    site == "Site_C" ~ "site_c",
+    site == "Site-C" ~ "site_c",
+    site == "Site C" ~ "site_c",
+    .default = as.character(site)
+  )
+  )
+  
+  # Verify it worked:
+  view(mosquito_egg_data_step1)
+  
+  view(mosquito_egg_data_step2)
+  
+  # What changed and why it matters:
+  # [2-3 sentences explaining consequences]
+  #
+  
+  
+  # FIX 2: [Biological inconsistencies in body mass variable]  ====
+
+# Show the problem:
+# [Code]
+
+# Fix it:
+mosquito_egg_data_step3 <- mosquito_egg_data_step2 |>
+  # YOUR CODE
+  
+  
+  # Verify it worked:
+  # [Code]
+  
+  # What changed and why it matters:
+  # [2-3 sentences]
+  #
+
+
+
+  
