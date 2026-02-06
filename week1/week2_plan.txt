@@ -11,36 +11,36 @@ to address in Week 2:
 
 ISSUE 1 (Most Important)
 -------------------------
-Brief description: [What's the problem? 1 sentence]
-There are no latin names in the original data set so I couldn't run parts of the code
-Which tutorial provides the solution: [Tutorial name/number]
+Brief description: [string-related inconsistencies (capitalisation, typos)]
 
-Which variable(s) affected: [Variable name(s)]
+Which tutorial provides the solution: [3 / Strings]
 
-Why this is important to fix: [Biological/analytical reason]
+Which variable(s) affected: [body_mass_mg / site / treatment]
 
-What I plan to do: [The technique I'll use, in plain English]
+Why this is important to fix: [to ensure data is consistent and can be analysed accurately]
 
+What I plan to do: 
+use the stringr package to clean text.
 
 
 ISSUE 2 (Second Most Important)
 --------------------------------
-Brief description: [What's the problem? 1 sentence]
-Delta_15n and Delta_13c columns are named wrong 
-Which tutorial provides the solution: [Tutorial name/number]
+Brief description: [biological impossibilities in the body mass variable]
 
-Which variable(s) affected: [Variable name(s)]
-Delta_15n, Delta_13c
+Which tutorial provides the solution: [7 / Check Data Consistency]
 
-Why this is important to fix: [Biological/analytical reason]
+Which variable(s) affected: [body_mass_mg]
 
-What I plan to do: [The technique I'll use, in plain English]
+
+Why this is important to fix: [ensure all data is accurate and can be analysed effectively]
+
+What I plan to do: [carry out basic range checks to check data consistency, filter data to identify impossible values, visual inspection, flag impossible observations] 
 
 
 
 OTHER ISSUES I NOTICED (but won't fix in Week 2)
 -------------------------------------------------
-- [Issue 3 - will address later if time]
+- [Issue 3 - will address later if time] [NA/missing values]
 - [Issue 4 - uncertain how to handle]
 - [Issue 5 - decided to leave as-is because...]
 

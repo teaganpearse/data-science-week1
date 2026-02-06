@@ -2,7 +2,7 @@
 TUTORIAL 1: CHECKING STRINGS - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[x] I completed the tutorial exercises
 
 
 CONNECTING TO MY DATA:
@@ -10,33 +10,33 @@ CONNECTING TO MY DATA:
 
 1. Did I identify any string-related questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [x] YES - Question #(s): 5. inconsistencies with capitalisation and spaces/dashes
    [ ] NO - Skip to question 4
 
 
 2. If YES, which technique from this tutorial could help address my question?
 
-   [ ] str_to_lower() - standardize capitalization
-   [ ] str_to_upper() - standardize capitalization  
-   [ ] str_trim() - remove leading/trailing whitespace
-   [ ] str_replace() - fix typos or inconsistent spellings
+   [x] str_to_lower() - standardize capitalization
+   [x] str_to_upper() - standardize capitalization  
+   [x] str_trim() - remove leading/trailing whitespace
+   [x] str_replace() - fix typos or inconsistent spellings
    [ ] Other: ___________
    [ ] None of these apply
 
 
 3. Show what this technique would DO to my data:
 
-   Variable name: ___________
+   Variable name: site / treatment
    
    Example values BEFORE:
-   - 
-   - 
-   - 
+   - Site_C
+   - Low_dose
+   - MEDIUM_DOSE
    
    What they would become AFTER:
-   - 
-   - 
-   - 
+   - site_c
+   - low_dose
+   - medium_dose
 
 
 4. If this tutorial is NOT relevant to my data:
@@ -53,7 +53,7 @@ CONNECTING TO MY DATA:
 TUTORIAL 2: CHECKING DATES - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[x] I completed the tutorial exercises
 
 
 
@@ -63,12 +63,12 @@ CONNECTING TO MY DATA:
 1. Did I identify any date-related questions in my Week 1 questions list?
 
    [ ] YES - Question #(s): ___________
-   [ ] NO - Skip to question 5
+   [x] NO - Skip to question 5
 
 
 2. If YES, which technique from this tutorial could help address my question?
 
-   [ ] dmy() / ymd() / mdy() - parse dates in different formats
+   [x] dmy() / ymd() / mdy() - parse dates in different formats
    [ ] excel_numeric_to_date() - convert Excel serial numbers
    [ ] Checking for impossible dates (wrong day/month/year)
    [ ] Other: ___________
@@ -77,7 +77,7 @@ CONNECTING TO MY DATA:
 
 3. Show what this technique would DO to my data:
 
-   Variable name: ___________
+   Variable name: collection date
    
    Example values BEFORE:
    - 
@@ -107,7 +107,7 @@ CONNECTING TO MY DATA:
 
    Why not?
    [ ] I don't have any date variables
-   [ ] My dates are already in proper format
+   [x] My dates are already in proper format
    [ ] My date issues are different from what this tutorial covers
    [ ] Other: ___________
 
@@ -117,7 +117,7 @@ CONNECTING TO MY DATA:
 TUTORIAL 3: CHECKING MISSING DATA PATTERNS - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[x] I completed the tutorial exercises
 
 
 CONNECTING TO MY DATA:
@@ -125,15 +125,15 @@ CONNECTING TO MY DATA:
 
 1. Did I identify any missing data questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [x] YES - Question #(s): 5. NA values observed in dataset
    [ ] NO - But I'll check anyway (missing data is common)
 
 
 2. Which variables have the most missing data?
 
-   Variable: ___________ | Percent missing: _____%
-   Variable: ___________ | Percent missing: _____%
-   Variable: ___________ | Percent missing: _____%
+   Variable: body_mass_mg = 15 | Percent missing: 6.3%
+   Variable: collector = 13 | Percent missing: 7.3%
+   Variable: eggs_laid & eggs_hatched = 16 | Percent missing: 7.8%
 
 
 3. Missingness types checklist
@@ -141,16 +141,17 @@ CONNECTING TO MY DATA:
 
    [ ] MCAR (Missing Completely At Random) - appears random/scattered
    [ ] MAR (Missing At Random) - related to other observed variables
-   [ ] MNAR (Missing Not At Random) - related to the missing value itself
+   [x] MNAR (Missing Not At Random) - related to the missing value itself
 
 Why is it important to know what type of missing data we have? 
+Determines how tou go about fixing the code
 
 ================================================================================
 ================================================================================
 TUTORIAL 4: CHECKING DUPLICATES - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[x] I completed the tutorial exercises
 
 
 CONNECTING TO MY DATA:
@@ -159,17 +160,17 @@ CONNECTING TO MY DATA:
 1. Did I identify any duplicate-related questions in my Week 1 questions list?
 
    [ ] YES - Question #(s): ___________
-   [ ] NO - But I'll check anyway
+   [x] NO - But I'll check anyway
 
 
 3. Think about consequences:
 
    If I remove duplicates, what am I assuming?
-   
+   That it isn't a seperate value in the dataset but just a copy of another
    
    If duplicates are actually repeated measures, what should I do instead?
    [ ] Keep them - they're legitimate observations
-   [ ] Flag them for later analysis that accounts for non-independence
+   [x] Flag them for later analysis that accounts for non-independence
    [ ] Other: ___________
    
    
@@ -178,7 +179,7 @@ CONNECTING TO MY DATA:
 TUTORIAL 5: NUMERIC & CROSS-VARIABLE CONSISTENCY - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[x] I completed the tutorial exercises
 
 
 PART A: NUMERIC PLAUSIBILITY
@@ -186,20 +187,20 @@ PART A: NUMERIC PLAUSIBILITY
 
 1. Did I identify any numeric plausibility questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [x] YES - Question #(s): negative body mass values
    [ ] NO - Skip to Part B
 
 
 2. If YES, which numeric variable looks suspicious?
 
-   Variable name: ___________
+   Variable name: body_mass_mg
    
-   Minimum value: _____  | Is this biologically possible? [ ] Yes [ ] No [ ] Unsure
-   Maximum value: _____  | Is this biologically possible? [ ] Yes [ ] No [ ] Unsure
+   Minimum value: 108.71482  | Is this biologically possible? [x] Yes [ ] No [ ] Unsure
+   Maximum value: -92.997339  | Is this biologically possible? [ ] Yes [x] No [ ] Unsure
    
 
    Why do these look wrong?
-   [ ] Negative value (impossible for this measurement)
+   [x] Negative value (impossible for this measurement)
    [ ] Zero (should be NA instead)
    [ ] Too large (exceeds known biological maximum)
    [ ] Too small (below known biological minimum)
@@ -214,7 +215,7 @@ PART B: CROSS-VARIABLE CONSISTENCY
 4. Did I identify any cross-variable questions in my Week 1 questions list?
 
    [ ] YES - Question #(s): ___________
-   [ ] NO - But I'll check anyway
+   [x] NO - But I'll check anyway
 
 
 5. Choose TWO variables that should be related (e.g., body length and body mass,
@@ -239,12 +240,12 @@ PART B: CROSS-VARIABLE CONSISTENCY
    If these variables are inconsistent, what should I do?
    [ ] Remove the observations
    [ ] Convert one variable to NA (which one? _________)
-   [ ] Flag for review but keep both
-   [ ] Query the data collector
+   [x] Flag for review but keep both
+   [x] Query the data collector
    [ ] Other: ___________
    
    Justification:
-   
+   Could be a mistake when inputting the data set
 
 
 ================================================================================
